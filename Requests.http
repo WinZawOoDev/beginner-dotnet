@@ -1,1 +1,40 @@
 GET http://localhost:5295/
+
+###
+
+GET http://localhost:5295/todos
+
+###
+
+GET http://localhost:5295/todos/1
+
+###
+
+POST http://localhost:5295/todos
+Content-Type: application/json
+
+{
+    "Id": 2,
+    "Name": "Learn Advance DotNet Core",
+    "DueDate": "2021-12-31T00:00:00",
+    "IsComplete": true
+}
+
+###
+
+PUT http://localhost:5295/todos/2
+Content-Type: application/json
+
+{
+    "Id": 1,
+    "Name": "Learn Advance DotNet Core",
+    "DueDate": "2021-12-31T00:00:00",
+    "IsComplete": false
+}
+
+###
+
+DELETE http://localhost:5295/todos/3
+
+###
+GET http://localhost:5295/tasks/

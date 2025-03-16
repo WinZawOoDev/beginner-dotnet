@@ -37,7 +37,7 @@ app.MapPut("todos/{id}", Results<Ok<ToDo>, NotFound> (int id, ToDo todoParams) =
     return TypedResults.Ok(todo);
 });
 
-app.MapDelete("todos/{id}", Results<Ok, NotFound> (int id) =>
+app.MapDelete("todos/{id}", Results<NoContent, NotFound> (int id) =>
 {
     var todo = todos.SingleOrDefault(t => t.Id == id);
 
@@ -46,7 +46,7 @@ app.MapDelete("todos/{id}", Results<Ok, NotFound> (int id) =>
         return TypedResults.NotFound();
     }
     todos.Remove(todo);
-    return TypedResults.Ok();
+    return TypedResults.NoContent();
 });
 
 app.Run();

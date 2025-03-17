@@ -14,10 +14,10 @@ POST http://localhost:5295/todos
 Content-Type: application/json
 
 {
-    "Id": 2,
+    "Id": 1,
     "Name": "Learn Advance DotNet Core",
-    "DueDate": "2021-12-31T00:00:00",
-    "IsComplete": true
+    "DueDate": "2022-12-31T00:00:00",
+    "IsComplete": false
 }
 
 ###
